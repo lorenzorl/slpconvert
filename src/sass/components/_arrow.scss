@@ -1,0 +1,92 @@
+$angle: 40deg;
+$dis: 5px;
+.arrow {
+  position: relative;
+  right: -10%;
+  height: 8.7px;
+  width: 15px;
+
+  &--ani {
+    animation-delay: 500ms;
+    animation: arrow-animation 1s;
+  }
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0.15rem;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+
+  &::before {
+    left: ($dis / 2);
+    transform: rotate($angle);
+  }
+   &::after {
+    left: -($dis / 2);
+    transform: rotate(-$angle);
+  }
+   &--open::before {
+    left: ($dis / 2);
+    transform: rotate(-$angle);
+  }
+   &--open::after {
+    left: -($dis / 2);
+    transform: rotate($angle);
+  }
+
+  @keyframes arrow-animation{
+    
+    0% {
+      transform: translate(0px, 0px);
+    }
+    20% {
+      transform: translate(0px, -2px);
+    }
+    35% {
+      transform: translate(2px, -2px);
+    }
+    50% {
+      transform: translate(-4px, -2px);
+    }
+    65% {
+      transform: translate(2px, -2px);
+    }
+    80% {
+      transform: translate(0px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+
+    // 0% {
+    //   transform: translateY(0);
+    // }
+    // 20% {
+    //   transform: translateX(10px);
+    // }
+    // 320% {
+    //   transform: translateX(-10px);
+    // }
+    // 44% {
+    //   transform: translateX(10px);
+    // }
+    // 56% {
+    //   transform: translateX(-10px);
+    // }
+    // 68% {
+    //   transform: translateX(0px);
+    // }
+    // 80% {
+    //   transform: translateY(0);
+    // }
+    // 100% {
+    //   transform: translateX(10px);
+    // }
+
+  }
+}

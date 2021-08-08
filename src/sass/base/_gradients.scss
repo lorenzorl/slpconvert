@@ -5,11 +5,10 @@
 
 .banano-gradient {
   background: rgb(237,129,143);
-background: linear-gradient(94deg, rgba(237,129,143,1) 0%, rgba(255,211,218,1) 65%, rgba(148,241,197,1) 100%);
+  background: linear-gradient(94deg, rgba(237,129,143,1) 0%, rgba(255,211,218,1) 65%, rgba(148,241,197,1) 100%);
 }
 
-.ves-gradient {
-	background: #136737;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #136737, #f2e74b);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #136737, #f2e74b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.local-gradient {
+  background: #03a9f4;
+  background: linear-gradient(90deg, #03a9f4 35%, #31cadd 60%);
 }

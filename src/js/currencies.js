@@ -1,0 +1,21 @@
+export default {
+    "ars": "Peso Argentino",
+    "bob": "Boliviano de Bolivia",
+    "brl": "Real de Brazil",
+    "bzd": "Dolar de Belice",
+    "clp": "Peso Chileno",
+    "cop": "Peso Colombiano",
+    "crc": "Colon de Costa Rica",
+    "cup": "Peso Cubano",
+    "dop": "Peso Dominicano",
+    "eur": "Euro",
+    "gtq": "Quetzal de Guatemala",
+    "hnl": "Lempira de Honduras",
+    "mxn": "Peso Mexicano",
+    "nio": "Córdova de Nicaragua",
+    "pen": "Sol Peruano",
+    "pyg": "Guarani de Paraguay",
+    "svc": "Colón de El Salvador",
+    "uyu": "Peso Uruguayo",
+    "ves": "Bolivar Venezolano"
+}

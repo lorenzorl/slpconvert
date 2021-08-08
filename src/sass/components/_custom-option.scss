@@ -1,0 +1,27 @@
+.custom-option {
+  position: relative;
+  display: flex;
+  padding: 0 10px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 25px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.5s;
+
+  &__flag {
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #b2b2b2;
+  }
+
+  &:selected {
+    color: #ffffff;
+    background-color: #305c91;
+  }
+}
