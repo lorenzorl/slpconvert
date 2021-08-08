@@ -67,10 +67,9 @@ export default () => {
       if (!this.classList.contains('selected')) {
         this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
         this.classList.add('selected');
-        console.log(this);
         document.querySelector('.custom-select__trigger > span').textContent = this.dataset.value.toUpperCase();
         hideOptions();
-      	const price = usdConversions[e.target.dataset.value];
+      	const price = usdConversions[this.dataset.value];
 				updateCurrency({ price });
       }
 	  })
@@ -119,6 +118,7 @@ export default () => {
 
 		const parsedValue = value === '' ? 1 : parseFloat(value);
 
+
 		if(currency === Slp){
 			convertionInLocalElement.value =  (parsedValue * slpPrice * localPrice).toFixed(2);
 			convertionInUsdElement.value = (parsedValue * slpPrice).toFixed(2);
@@ -151,7 +151,6 @@ export default () => {
 				document.querySelector('.arrow').classList.add('arrow--ani');
 				setTimeout(() => {
 					document.querySelector('.card .card__loader').style.display = 'none';
-					console.log('esto tambien');
 				}, 500);
 			}, 500);
 		}
