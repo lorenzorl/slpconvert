@@ -28,7 +28,7 @@ export default () => {
 	});
 
 	convertionInSlpElement.addEventListener('input', e => updateValue(Slp, e.target.value));
-	convertionInLocalElement.addEventListener('input', e => updateValue(Ves, e.target.value));
+	convertionInLocalElement.addEventListener('input', e => updateValue(Local, e.target.value));
 	convertionInUsdElement.addEventListener('input', e => updateValue(Usd, e.target.value));
 
 	convertionInSlpElement.addEventListener('blur', e => resetValues(e));
@@ -38,7 +38,7 @@ export default () => {
 	Object.keys(currencies).forEach(key => {
 		const optionElement = document.createElement('div');
 		optionElement.classList.add('custom-option');
-		if(key === 'ves'){
+		if(key === 'ars'){
 			optionElement.classList.add('selected');
 			document.querySelector('.custom-select__trigger span').textContent = key.toUpperCase();
 		}
@@ -107,7 +107,7 @@ export default () => {
 			const res = await fetch(url);
 			const data = await res.json();
 			usdConversions = data.usd;
-			updateCurrency({ price: data.usd.ves });
+			updateCurrency({ price: data.usd.ars });
 			checkData();
 		} catch (e){
 			console.log(e);
